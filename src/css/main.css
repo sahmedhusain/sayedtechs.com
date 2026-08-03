@@ -1,0 +1,10 @@
+/**
+ * Master Stylesheet — sayedtechs.com Coming Soon Page
+ * 
+ * Bundles design tokens, document resets, layouts, and components.
+ */
+
+@import "./variables.css";
+@import "./base.css";
+@import "./layout.css";
+@import "./components/coming-soon.css";

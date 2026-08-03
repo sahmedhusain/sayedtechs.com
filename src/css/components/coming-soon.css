@@ -1,0 +1,269 @@
+/**
+ * Components: Coming Soon Landing Page Styles
+ */
+
+/* Header action buttons */
+.portal-header-actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: var(--apple-glass-bg);
+  border: 1px solid var(--apple-glass-border);
+  color: var(--text-primary);
+  height: 44px;
+  border-radius: 22px;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px var(--navy-shadow);
+  transition: var(--transition);
+}
+
+.action-btn ion-icon {
+  font-size: 1.15rem;
+}
+
+/* Theme toggle circle override */
+#theme-toggle-btn {
+  width: 44px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  background: var(--card-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 15px rgba(0, 181, 165, 0.3);
+}
+
+/* Minimalist Landing Wrapper (No background card container) */
+.coming-soon-content {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+}
+
+/* Profile details */
+.avatar-container {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin-bottom: 1.5rem;
+  background: var(--bg-primary);
+  padding: 3px;
+  /* Brand guidelines fold-cut for the logo badge avatar */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+  box-shadow: 0 8px 24px var(--navy-shadow);
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 21px), calc(100% - 21px) 100%, 0 100%);
+}
+
+.profile-name {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.profile-handle {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--barzakh-teal);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+}
+
+.profile-handle:hover {
+  color: var(--desert-gold);
+  transform: scale(1.02);
+}
+
+/* Centered Bio / Coming Soon description */
+.profile-bio {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  max-width: 440px;
+  text-wrap: pretty;
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+html[lang="ar"] .profile-bio {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+}
+
+/* Call To Action Buttons */
+.cta-button {
+  width: 100%;
+  max-width: 320px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--barzakh-teal);
+  border: 1px solid var(--barzakh-teal);
+  color: var(--pure-white);
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 15px rgba(0, 181, 165, 0.2);
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  background: transparent;
+  color: var(--barzakh-teal);
+  box-shadow: 0 6px 20px rgba(0, 181, 165, 0.35);
+}
+
+.cta-button i {
+  font-size: 1.15rem;
+}
+
+/* Social icons footer bar */
+.social-icons-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+  width: 100%;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--apple-glass-bg);
+  border: 1px solid var(--apple-glass-border);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 1.2rem;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.social-icon-link:hover {
+  transform: translateY(-3px);
+  color: var(--white);
+  border-color: var(--social-accent, var(--accent));
+  background: var(--social-accent, var(--accent));
+  box-shadow: 0 5px 15px var(--social-glow, rgba(0, 181, 165, 0.25));
+}
+
+/* Social Platfrom Colors */
+.icon-snapchat {
+  --social-accent: #FFFC00;
+  --social-glow: rgba(255, 252, 0, 0.2);
+}
+[data-theme="light"] .icon-snapchat:hover {
+  color: #000000;
+}
+.icon-facebook {
+  --social-accent: #1877F2;
+  --social-glow: rgba(24, 119, 242, 0.2);
+}
+.icon-instagram {
+  --social-accent: #E4405F;
+  --social-glow: rgba(228, 64, 95, 0.2);
+}
+.icon-x {
+  --social-accent: #000000;
+  --social-glow: rgba(10, 10, 10, 0.15);
+}
+[data-theme="dark"] .icon-x {
+  --social-accent: #FFFFFF;
+  --social-glow: rgba(255, 255, 255, 0.15);
+}
+[data-theme="dark"] .icon-x:hover {
+  color: #000000;
+}
+.icon-tiktok {
+  --social-accent: #00F2EA;
+  --social-glow: rgba(0, 242, 234, 0.2);
+}
+[data-theme="light"] .icon-tiktok:hover {
+  color: #000000;
+}
+.icon-youtube {
+  --social-accent: #FF0000;
+  --social-glow: rgba(255, 0, 0, 0.2);
+}
+.icon-email {
+  --social-accent: #C9A24B;
+  --social-glow: rgba(201, 162, 75, 0.2);
+}
+
+/* Footer Wordmark */
+.portal-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.footer-logo {
+  max-height: 28px;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.2px;
+}
+
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  color: var(--barzakh-teal);
+}

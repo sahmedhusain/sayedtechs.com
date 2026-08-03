@@ -1,0 +1,71 @@
+/**
+ * Design Tokens — sayedtechs.com Coming Soon Page
+ * 
+ * Declares brand colors, typography, transitions, and theme variables.
+ */
+
+:root {
+  /* Brand Guidelines Colors */
+  --ink-black: #0A0A0A;
+  --pure-white: #FFFFFF;
+  --barzakh-teal: #00B5A5;
+  --desert-gold: #C9A24B;
+  --midnight-navy: #0E1B2A;
+  --graphite-dark: #1C1C1E;
+  --steel-gray: #3A3A3C;
+  --fog-light: #F2F2F4;
+
+  /* Theme Defaults (Dark Theme) */
+  --bg-primary: var(--ink-black);
+  --bg-secondary: var(--midnight-navy);
+  --accent: var(--barzakh-teal);
+  --accent-light: rgba(0, 181, 165, 0.05);
+  --text-primary: var(--pure-white);
+  --text-secondary: var(--steel-gray);
+  --white: var(--pure-white);
+  --navy-shadow: rgba(0, 0, 0, 0.25);
+  --card-bg: rgba(28, 28, 30, 0.6);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --gradient-start: var(--ink-black);
+  --gradient-end: var(--midnight-navy);
+  --glass-bg: rgba(28, 28, 30, 0.7);
+  --apple-glass-bg: rgba(14, 27, 42, 0.4);
+  --apple-glass-border: rgba(255, 255, 255, 0.08);
+  --overlay: rgba(10, 10, 10, 0.95);
+
+  /* Highlight Shadows */
+  --glow-color: var(--barzakh-teal);
+  --glow-color-secondary: var(--desert-gold);
+
+  /* Typography */
+  --font-sans: "IBM Plex Sans", "Tajawal", "Outfit", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-arabic: "Tajawal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Fira Code", "SF Mono", monospace;
+
+  /* Global Animations and Borders */
+  --radius-lg: 0px; /* Sharp corners for profile avatar logo badge */
+  --radius-md: 20px; /* Glassmorphic card rounded borders */
+  --radius-sm: 12px; /* Button rounded borders */
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+  --bg-primary: var(--fog-light);
+  --bg-secondary: var(--pure-white);
+  --accent: var(--barzakh-teal);
+  --accent-light: rgba(0, 181, 165, 0.05);
+  --text-primary: var(--ink-black);
+  --text-secondary: var(--steel-gray);
+  --white: var(--pure-white);
+  --navy-shadow: rgba(14, 27, 42, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(58, 58, 60, 0.15);
+  --gradient-start: rgba(242, 242, 244, 0.8);
+  --gradient-end: var(--pure-white);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --apple-glass-bg: rgba(255, 255, 255, 0.7);
+  --apple-glass-border: rgba(255, 255, 255, 0.4);
+  --overlay: rgba(242, 242, 244, 0.95);
+}

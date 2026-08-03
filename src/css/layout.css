@@ -1,0 +1,79 @@
+/**
+ * Layout Styles — sayedtechs.com Coming Soon Page
+ * 
+ * Configures layout boundaries and background glow decorations.
+ */
+
+.portal-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at center, var(--gradient-end) 0%, var(--gradient-start) 100%);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Ambient Floating Blur Bubbles */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+}
+
+[data-theme="light"] .ambient-glow {
+  opacity: 0.08;
+}
+
+.glow-bubble-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--glow-color);
+  top: -100px;
+  left: -100px;
+  animation: floatBubble1 20s infinite alternate ease-in-out;
+}
+
+.glow-bubble-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--glow-color-secondary);
+  bottom: -150px;
+  right: -100px;
+  animation: floatBubble2 25s infinite alternate ease-in-out;
+}
+
+@keyframes floatBubble1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(80px, 50px) scale(1.15);
+  }
+}
+
+@keyframes floatBubble2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-100px, -60px) scale(1.1);
+  }
+}
+
+/* Content Container Constraints */
+.content-wrapper {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
