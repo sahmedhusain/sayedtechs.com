@@ -6,7 +6,7 @@
 const TRANSLATIONS = {
   en: {
     name: "Mr. Tech",
-    bio: "ًThe website is under development and will be launched soon...",
+    bio: "The website is under development and will be launched soon...",
     cta: "Contact Us",
     toggleBtn: "العربية"
   },
@@ -53,41 +53,8 @@ if (langToggleBtn) {
   });
 }
 
-// 2. Theme Configuration
-const themeToggleBtn = document.getElementById('theme-toggle-btn');
-const themeIcon = document.getElementById('theme-icon');
-
-function getTheme() {
-  return localStorage.getItem('sayedtech-theme') || 'dark';
-}
-
-function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('sayedtech-theme', theme);
-  
-  if (themeIcon) {
-    themeIcon.name = theme === 'dark' ? 'sunny-outline' : 'moon-outline';
-  }
-
-  // Update horizontal logo image source if present
-  const footerLogo = document.querySelector('.footer-logo');
-  if (footerLogo) {
-    const filename = theme === 'dark' ? 'logo-horizontal-reversed.svg' : 'logo-horizontal-black.svg';
-    footerLogo.src = `./SayedTech-Logo-System/SVG/${filename}`;
-  }
-}
-
-// Set initial theme
-setTheme(getTheme());
-
-// Event listener for theme toggle
-if (themeToggleBtn) {
-  themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-  });
-}
+// 2. Enforce Dark Theme on Startup
+document.documentElement.setAttribute('data-theme', 'dark');
 
 // 3. Render Current Copyright Year
 const yearElement = document.getElementById('current-year');

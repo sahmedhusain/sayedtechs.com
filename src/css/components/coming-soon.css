@@ -36,12 +36,7 @@
   font-size: 1.15rem;
 }
 
-/* Theme toggle circle override */
-#theme-toggle-btn {
-  width: 44px;
-  padding: 0;
-  border-radius: 50%;
-}
+
 
 .action-btn:hover {
   transform: translateY(-2px);
@@ -153,83 +148,7 @@ html[lang="ar"] .profile-bio {
   font-size: 1.15rem;
 }
 
-/* Social icons footer bar */
-.social-icons-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 2.25rem;
-  width: 100%;
-}
 
-.social-icon-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--apple-glass-bg);
-  border: 1px solid var(--apple-glass-border);
-  color: var(--text-secondary);
-  border-radius: var(--radius-sm);
-  font-size: 1.2rem;
-  text-decoration: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: var(--transition);
-}
-
-.social-icon-link:hover {
-  transform: translateY(-3px);
-  color: var(--white);
-  border-color: var(--social-accent, var(--accent));
-  background: var(--social-accent, var(--accent));
-  box-shadow: 0 5px 15px var(--social-glow, rgba(0, 181, 165, 0.25));
-}
-
-/* Social Platfrom Colors */
-.icon-snapchat {
-  --social-accent: #FFFC00;
-  --social-glow: rgba(255, 252, 0, 0.2);
-}
-[data-theme="light"] .icon-snapchat:hover {
-  color: #000000;
-}
-.icon-facebook {
-  --social-accent: #1877F2;
-  --social-glow: rgba(24, 119, 242, 0.2);
-}
-.icon-instagram {
-  --social-accent: #E4405F;
-  --social-glow: rgba(228, 64, 95, 0.2);
-}
-.icon-x {
-  --social-accent: #000000;
-  --social-glow: rgba(10, 10, 10, 0.15);
-}
-[data-theme="dark"] .icon-x {
-  --social-accent: #FFFFFF;
-  --social-glow: rgba(255, 255, 255, 0.15);
-}
-[data-theme="dark"] .icon-x:hover {
-  color: #000000;
-}
-.icon-tiktok {
-  --social-accent: #00F2EA;
-  --social-glow: rgba(0, 242, 234, 0.2);
-}
-[data-theme="light"] .icon-tiktok:hover {
-  color: #000000;
-}
-.icon-youtube {
-  --social-accent: #FF0000;
-  --social-glow: rgba(255, 0, 0, 0.2);
-}
-.icon-email {
-  --social-accent: #C9A24B;
-  --social-glow: rgba(201, 162, 75, 0.2);
-}
 
 /* Footer Wordmark */
 .portal-footer {

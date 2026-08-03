@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sayedtechs-coming-soon-v3';
+const CACHE_NAME = 'sayedtechs-coming-soon-v4';
 const APP_SHELL = [
   './',
   './index.html',
